@@ -5,6 +5,7 @@ and the installers are on the [Releases page](https://github.com/laaielichter/Ag
 
 ## Unreleased
 
+- **A full list of the secrets Guard removes** (`docs/guides/guard.md`): every kind in `SECRET_RULES`, grouped by provider, with its shape described in words and a section on what Guard deliberately leaves alone; the README Guard paragraph links to it. Thanks to @17302513901yh-lang! (#180, #197)
 - **The lease test no longer depends on wall-clock sleeps:** `Store` takes an optional `now` clock (default `Date.now`, so nothing changes in normal use), and the test in `test/board.test.js` steps time forward instead of sleeping, so slow Windows runners no longer make it fail. Thanks to @sdhanushh! (#175, #184)
 - **`agenthaven <command> --help` shows the usage instead of running the command:** `status --help`, `serve --help`, `connect -h` and the rest print the usage and exit 0 without reading or writing anything, so `connect --help` no longer writes agent-app config files and `serve --help` no longer starts the dashboard. `hook` behaves as before. Thanks to @monkey9-Cyber-cat-Spidy! (#179, #182)
 - **The README opening, Quickstart and "Why AgentHaven" table in Spanish** (`docs/translations/README.es.md`), with the English README commit it was translated from and a link from the English README. Thanks to @Daiyuanranfeng! (#51, #177)
